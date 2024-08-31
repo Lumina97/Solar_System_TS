@@ -1,7 +1,17 @@
 // SPACE DATA EXERCISE 11
 // Return an array of Planets with less than 10 moons
+
+import { TPlanet } from "../data/data";
+
 // include planets with 0 moons
-export function lowMoonsPlanets(planets) {}
+export function lowMoonsPlanets(planets: TPlanet[]) {
+  const result = planets.filter(
+    (planet: TPlanet) =>
+      typeof planet.moonsCount !== "number" || planet.moonsCount < 10
+  );
+  console.log(result);
+  return result;
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-11"

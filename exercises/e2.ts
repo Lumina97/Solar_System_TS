@@ -2,7 +2,11 @@
 // Return an array of all Asteroids' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getAsteroidNames(asteroids) {}
+import { TAsteroid } from "../data/data";
+
+export function getAsteroidNames(asteroids: TAsteroid[]) {
+  return asteroids.map((asteroid: TAsteroid) => asteroid.name);
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-2"
