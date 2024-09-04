@@ -5,12 +5,10 @@ import { TPlanet } from "../data/data";
 
 // include planets with 0 moons
 export function lowMoonsPlanets(planets: TPlanet[]) {
-  const result = planets.filter(
+  return planets.filter(
     (planet: TPlanet) =>
       typeof planet.moonsCount !== "number" || planet.moonsCount < 10
   );
-  console.log(result);
-  return result;
 }
 
 // === TEST YOURSELF ===
